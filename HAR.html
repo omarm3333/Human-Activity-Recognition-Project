@@ -73,7 +73,7 @@ img {
 <h2>1. Exploratory Analysis</h2>
 <div id="a-data-cleaning" class="section level3">
 <h3>a) Data Cleaning</h3>
-<p>After loading the information from the source, we can identify that there are several variables that have NA values with few observations valuables. For such, these are considered to be removed from the model.</p>
+<p>After loading the information from the source, we can identify that there are several variables that have NA values with few observations valuables or not necessary like time and windows related. For such, these are considered to be removed from the model.</p>
 <pre class="r"><code>training &lt;- read.table(&quot;pml-training.csv&quot;, header = TRUE, sep=&quot;,&quot;, na.strings = c(NA, &quot;&quot;))
 testing  &lt;- read.table(&quot;pml-testing.csv&quot;, header = TRUE, sep=&quot;,&quot;, na.strings = c(NA, &quot;&quot;))
 
@@ -165,7 +165,7 @@ system.time (fitModel &lt;- train(classe ~ ., data = new.training, method = &quo
         )
 )</code></pre>
 <pre><code>##    user  system elapsed 
-## 885.633   9.328 921.751</code></pre>
+## 918.964  12.054 985.068</code></pre>
 <pre class="r"><code>fitModel </code></pre>
 <pre><code>## Random Forest 
 ## 
